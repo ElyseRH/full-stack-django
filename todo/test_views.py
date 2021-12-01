@@ -26,7 +26,7 @@ class TestViews(TestCase):
 
     def test_can_delete_item(self):
         item = Item.objects.create(name='Test Todo Item')
-        response = self.client.get(f'/edit/{item.id}')
+        response = self.client.get(f'/delete/{item.id}')
         self.assertRedirects(response, '/')
         existing_items = Item.objects.filter(id=item.id) # check if items exists by trying to retrieve it
         self.assertEqual(len(existing_items), 0) # test will pass if list is empty

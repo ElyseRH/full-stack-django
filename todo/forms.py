@@ -7,4 +7,4 @@ class ItemForm(forms.ModelForm): #dot notation
         model = Item
         fields = ['name', 'done']
 
-#to make sure we can use this form, import it in views.py
+#to make sure we can use this form, import it in views.py (and any relevant tests)
